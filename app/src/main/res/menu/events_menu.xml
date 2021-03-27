@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/searchEvents"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/hideCompleteEvents"
+        android:checkable="true"
+        android:title="@string/hide"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/deleteCompleteEvents"
+        android:title="@string/delete"
+        app:showAsAction="never" />
+
+</menu>

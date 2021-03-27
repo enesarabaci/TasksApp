@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/baseFragment">
+
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.yaplacaklarlistesi.View.BaseFragment"
+        android:label="BaseFragment">
+        <action
+            android:id="@+id/action_baseFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
+        <action
+            android:id="@+id/action_baseFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.yaplacaklarlistesi.View.EventsFragment"
+        android:label="EventsFragment" >
+        <argument
+            android:name="LocalDate"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <argument
+            android:name="Hour"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_eventsFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventFragment"
+        android:name="com.example.yaplacaklarlistesi.View.AddEventFragment"
+        android:label="AddEventFragment">
+        <argument
+            android:name="date"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <argument
+            android:name="time"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addEventFragment_to_baseFragment"
+            app:destination="@id/baseFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="event"
+            app:argType="com.example.yaplacaklarlistesi.Model.Event"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.example.yaplacaklarlistesi.View.EventDetailFragment"
+        android:label="EventDetailFragment" >
+        <argument
+            android:name="uid"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_eventDetailFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lateEventsFragment"
+        android:name="com.example.yaplacaklarlistesi.View.LateEventsFragment"
+        android:label="LateEventsFragment" >
+        <action
+            android:id="@+id/action_lateEventsFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventTypesFragment"
+        android:name="com.example.yaplacaklarlistesi.View.EventTypesFragment"
+        android:label="EventTypesFragment" >
+        <action
+            android:id="@+id/action_eventTypesFragment_to_typeDialogFragment"
+            app:destination="@id/typeDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/typeDialogFragment"
+        android:name="com.example.yaplacaklarlistesi.View.TypeDialogFragment"
+        android:label="TypeDialogFragment" >
+        <argument
+            android:name="type"
+            app:argType="com.example.yaplacaklarlistesi.Model.Type"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+</navigation>

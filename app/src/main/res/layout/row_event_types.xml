@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_event_type"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/ripple_effect">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/row_event_type_color"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="20dp"
+        app:cardBackgroundColor="@color/purple_500"
+        app:cardCornerRadius="25dp" />
+
+    <TextView
+        android:id="@+id/row_event_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_toStartOf="@id/row_event_type_settings"
+        android:layout_toEndOf="@id/row_event_type_color"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Önemli"
+        android:textColor="@color/black" />
+
+    <ImageButton
+        android:id="@+id/row_event_type_settings"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_baseline_more_vert_24"
+        android:backgroundTint="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:background="@color/line" />
+
+</RelativeLayout>

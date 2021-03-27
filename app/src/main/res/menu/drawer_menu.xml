@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/eventsFragment"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="@string/events" />
+
+    <item
+        android:id="@+id/lateEventsFragment"
+        android:icon="@drawable/ic_baseline_event_busy_24"
+        android:title="@string/lateEvents" />
+
+    <item
+        android:id="@+id/eventTypesFragment"
+        android:icon="@drawable/ic_baseline_category_24"
+        android:title="@string/eventTypes" />
+
+</menu>

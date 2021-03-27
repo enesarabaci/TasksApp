@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Yapılacaklar Listesi</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="events">Görevler</string>
+    <string name="lateEvents">Geçmiş Görevler</string>
+    <string name="eventTypes">Görev Türleri</string>
+    <string name="save">Kaydet</string>
+    <string name="edit">Düzenle</string>
+    <string name="sort">Sırala</string>
+    <string name="hide">Yapılmış Görevleri Gizle</string>
+    <string name="delete">Yapılmış Görevleri Sil</string>
+    <string name="search">Ara</string>
+    <string-array name="dialog">
+        <item>Görevleri Göster</item>
+        <item>Yeni Görev</item>
+    </string-array>
+    <string-array name="type_dialog">
+        <item>Düzenle</item>
+        <item>Sil</item>
+    </string-array>
+
+</resources>
